@@ -3,6 +3,7 @@
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content Type" />
     <meta content="utf-8" http-equiv="encoding" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
@@ -12,10 +13,19 @@
       var canvas, canvasContext;
 
       window.onload = function () {
+        //Get element from html
         canvas = document.getElementById("gameCanvas");
         canvasContext = canvas.getContext("2d");
+
+        //Draw and fill the rectangle of the canvas and set its color.
         canvasContext.fillStyle = "#023e8a";
         canvasContext.fillRect(0, 0, canvas.width, canvas.height);
+
+        //Draw the ball
+        canvasContext.fillStyle = "white"; //color white
+        canvasContext.beginPath(); // Telling it to start drawing it.
+        canvasContext.arc(100, 100, 10, 0, Math.PI * 2, true); //Telling it the x & y position to draw it, plus the radius and the radians fill.
+        canvasContext.fill();
       };
     </script>
   </body>
