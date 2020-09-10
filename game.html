@@ -8,13 +8,14 @@
   <body>
     <canvas id="gameCanvas" width="800" height="600"></canvas>
 
-    This text should be <b>bold</b>
     <script>
       var canvas, canvasContext;
 
       window.onload = function () {
         canvas = document.getElementById("gameCanvas");
         canvasContext = canvas.getContext("2d");
+        canvasContext.fillStyle = "#023e8a";
+        canvasContext.fillRect(0, 0, canvas.width, canvas.height);
       };
     </script>
   </body>
